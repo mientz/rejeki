@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="" name="description">
+        <meta content="" name="author">
+        <link href="assets/img/logo-fav.png" rel="shortcut icon">
+        <title>Rejeki Transindo &#124; RENTCAR APP</title>
+        <link href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/lib/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/jquery.gritter/css/jquery.gritter.css" />
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <style>
+            .be-wrapper::-webkit-scrollbar {
+                width: 14px;
+                height: 1px;
+                padding-top: 61px;
+            }
+            .be-wrapper::-webkit-scrollbar-thumb {
+                height: 6px;
+                border: 4px solid rgba(0, 0, 0, 0);
+                background-clip: padding-box;
+                -webkit-border-radius: 7px;
+                background-color: rgba(0, 0, 0, 0.15);
+                -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+            }
+            .be-wrapper::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            .be-wrapper::-webkit-scrollbar-corner {
+                background-color: transparent;
+            }
+        </style>
+    </head>
+
+    <body style="max-height:100%;overflow-y:hidden;">
+        <div class="be-wrapper be-fixed-sidebar"  style="max-height:100%;overflow-y:scroll;">
+            <nav class="navbar navbar-default navbar-fixed-top be-top-header">
+                <div class="container-fluid"  style="-webkit-app-region: drag;">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"></a>
+                    </div>
+                    <div class="be-right-navbar" style="padding-right:0 !important;">
+                        <div class="page-title">
+                            <span>Blank Page</span>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right be-icons-nav">
+                            <li class="dropdown">
+                                <a id="close-btn" role="button" href="#" class="dropdown-toggle" style="-webkit-app-region: no-drag;">
+                                    <span class="icon mdi mdi-close"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right be-icons-nav">
+                            <li class="dropdown">
+                                <a id="max-btn" role="button" href="#" class="dropdown-toggle" style="-webkit-app-region: no-drag;">
+                                    <span class="icon mdi mdi-window-maximize"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right be-icons-nav" style="padding-left:20px !important;">
+                            <li class="dropdown">
+                                <a id="min-btn" role="button" href="#" class="dropdown-toggle" style="-webkit-app-region: no-drag;">
+                                    <span class="icon mdi mdi-window-minimize"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right be-user-nav">
+                            <li class="dropdown">
+                                <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="-webkit-app-region: no-drag;">
+                                    <img alt="Avatar" src="assets/img/avatar.png">
+                                    <span class="user-name">Túpac Amaru</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-user" role="menu">
+                                    <li>
+                                        <div class="user-info">
+                                            <div class="user-name">
+                                                Túpac Amaru
+                                            </div>
+                                            <div class="user-position online">
+                                                Available
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="icon mdi mdi-face"></span> Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="icon mdi mdi-settings"></span> Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="btn-logout"><span class="icon mdi mdi-power"></span> Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right be-icons-nav">
+                            <li class="dropdown">
+                                <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="-webkit-app-region: no-drag;">
+                                    <span class="icon mdi mdi-notifications"></span><span class="indicator"></span>
+                                </a>
+                                <ul class="dropdown-menu be-notifications">
+                                    <li>
+                                        <div class="title">
+                                            Notifications<span class="badge">3</span>
+                                        </div>
+                                        <div class="list">
+                                            <div class="be-scroller">
+                                                <div class="content">
+                                                    <ul>
+                                                        <li class="notification notification-unread">
+                                                            <a href="#">
+                                                                <div class="image"><img alt="Avatar" src="assets/img/avatar2.png"></div>
+                                                                <div class="notification-info">
+                                                                    <div class="text">
+                                                                        <span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.
+                                                                    </div>
+                                                                    <span class="date">2 min ago</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer">
+                                            <a href="#">View all notifications</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="be-left-sidebar">
+                <div class="left-sidebar-wrapper">
+                    <a class="left-sidebar-toggle" href="#">Blank Page</a>
+                    <div class="left-sidebar-spacer">
+                        <div class="left-sidebar-scroll">
+                            <div class="left-sidebar-content">
+                                <ul class="sidebar-elements">
+                                    <li class="divider">Menu</li>
+                                    <li>
+                                        <a href="index.html"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+                                    </li>
+                                    <li class="parent">
+                                        <a href="#"><i class="icon mdi mdi-money-box"></i><span>Penyewaan</span></a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="rent/list.html" class="page-link page-link-sidebar">Daftar Penyewaan</a>
+                                            </li>
+                                            <li>
+                                                <a href="rent/add.html" class="page-link page-link-sidebar">Baru</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <a href="#"><i class="icon mdi mdi-car"></i><span>Kendaraan</span></a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="cars/list.html" class="page-link page-link-sidebar">Daftar Kendaraan</a>
+                                            </li>
+                                            <li>
+                                                <a href="cars/add.html" class="page-link page-link-sidebar">Tambah Kendaraan</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="driver/list.html" class="page-link"><i class="icon mdi mdi-home"></i><span>Sopir</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-widget">
+                        <div class="progress-data">
+                            <span class="progress-value">60%</span><span class="name">Current Project</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" style="width: 60%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="be-content" style="max-height:100% !important;overflow-y:hidden;">
+
+            </div>
+        </div>
+        <script>
+            var app = require('electron');
+            var remote = require('electron').remote;
+            var fs = require('fs');
+            var sqlite3 = require('sqlite3').verbose();
+            var db = new sqlite3.Database('./rejeki.db');
+            document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize();
+            });
+
+            document.getElementById("max-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                if (!window.isMaximized()) {
+                    window.maximize();
+                } else {
+                    window.unmaximize();
+                }
+            });
+
+            document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+            });
+        </script>
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <script type="text/javascript" src="assets/lib/jquery/jquery.min.js" ></script>
+        <script type="text/javascript" src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" ></script>
+        <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="assets/lib/jquery.maskedinput/jquery.maskedinput.min.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/js/jquery.dataTables.min.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/js/dataTables.bootstrap.min.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/plugins/buttons/js/buttons.html5.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/plugins/buttons/js/buttons.flash.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/plugins/buttons/js/buttons.print.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/plugins/buttons/js/buttons.colVis.js" ></script>
+        <script type="text/javascript" src="assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js" ></script>
+        <script type="text/javascript" src="assets/lib/jquery.gritter/js/jquery.gritter.js"></script>
+        <script type="text/javascript" src="assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js"></script>
+        <script type="text/javascript" src="assets/lib/fuelux/js/wizard.js"></script>
+        <script type="text/javascript" src="assets/lib/select2/js/select2.min.js"></script>
+        <script type="text/javascript" src="assets/lib/bootstrap-slider/js/bootstrap-slider.js"></script>
+        <script type="text/javascript" src="assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="assets/lib/datetimepicker/js/locales/bootstrap-datetimepicker.id.js"></script>
+        <script type="text/javascript" src="assets/lib/moment.js/moment.js"></script>
+        <script type="text/javascript" src="assets/lib/moment.js/locale/id.js"></script>
+<!--        <script type="text/javascript" src="assets/lib/moment.js/min/moment-with-locales.min.js"></script>-->
+
+        <script type="text/javascript" src="assets/js/main.js" ></script>
+        <script type="text/javascript" src="assets/js/jquery.serializejson.js" ></script>
+        <script type="text/javascript" src="assets/js/validator.min.js" ></script>
+        <script type="text/javascript" src="assets/js/app-tables-datatables.js" ></script>
+        <script type="text/javascript" src="assets/js/app-form-masks.js" ></script>
+        <script type="text/javascript" src="assets/js/app-form-wizard.js" ></script>
+        <script type="text/javascript" src="assets/js/app-form-elements.js" ></script>
+        <script type="text/javascript" src="assets/js/twig.min.js" ></script>
+        <script type="text/javascript" src="assets/js/bootbox.min.js" ></script>
+        <script type="text/javascript" src="assets/js/jquery.form.min.js" ></script>
+        <script type="text/javascript" src="assets/js/autoNumeric.js" ></script>
+        <script>
+            $.fn.niftyModal('setDefaults',{
+                overlaySelector: '.modal-overlay',
+                closeSelector: '.modal-close',
+                classAddAfterOpen: 'modal-show',
+            });
+            $(document).ready(function(){
+                //initialize the javascript
+                App.init();
+            });
+        </script>
+        <!--App Models-->
+        <script src="../src/models/users.js"></script>
+        <script src="../src/models/cars.js"></script>
+        <script src="../src/models/driver.js"></script>
+        <script src="../src/models/transaction.js"></script>
+        <script src="../src/models/pricing.js"></script>
+        <!--App Scripts-->
+        <script src="../src/print.js"></script>
+        <script src="../src/index.js"></script>
+        <script src="../src/car.js"></script>
+        <script src="../src/driver.js"></script>
+        <script src="../src/transaction.js"></script>
+        <script>if (window.module) module = window.module;</script>
+    </body>
+</html>

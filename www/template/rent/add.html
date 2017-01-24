@@ -1,0 +1,244 @@
+<div class="page-head">
+    <h2 class="page-head-title">Penyewaan Baru</h2>
+    <ol class="breadcrumb page-head-nav">
+        <li>
+            <a href="#" class="page-link">Home</a>
+        </li>
+        <li>
+            <a href="rent/list.html" class="page-link">Penyewaan</a>
+        </li>
+        <li class="active">Baru</li>
+    </ol>
+</div>
+<div class="main-content container-fluid" data-title="Tambah Kendaraan" data-page="add-cars">
+    <div class="row wizard-row">
+        <div class="col-md-12 fuelux">
+            <div class="block-wizard panel panel-default">
+                <div id="wizard1" class="wizard wizard-ux no-steps-container">
+                    <ul class="steps" style="margin-left: 0">
+                        <li data-step="1" class="active">Identitas Penyewa<span class="chevron"></span></li>
+                        <li data-step="2" class="">Daftar Mobil<span class="chevron"></span></li>
+                        <li data-step="3" class="">Nota<span class="chevron"></span></li>
+                    </ul>
+                    <div class="actions">
+                        <button type="button" class="btn btn-xs btn-prev btn-default" disabled="disabled">
+                            <i class="icon mdi mdi-chevron-left"></i>Sebelumnya
+                        </button>
+                        <button type="button" data-last="Selesai" class="btn btn-xs btn-next btn-primary" style="color:#fff;">
+                            Selanjutnya<i class="icon mdi mdi-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="step-content">
+                        <div data-step="1" class="step-pane active">
+                            <form role="form" data-toggle="validator" style="border-radius: 0px;" class="form-horizontal xs-pt-10" id="form-new-order">
+                                <div class="form-group has-feedback">
+                                    <label class="col-sm-3 control-label">Nama Pemesan</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input type="text" name="name" placeholder="nama pemesan" class="form-control" data-required-error="Mohon diisi lengkap" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-sm-3 control-label">Alamat Pemesan</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input type="text" name="address" placeholder="Alamat pemesan" class="form-control" data-required-error="Mohon diisi lengkap" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-sm-3 control-label">Telepon</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input type="text" name="tel" placeholder="Telepon pemesan" class="form-control" data-required-error="Mohon diisi lengkap" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div data-step="2" class="step-pane">
+                            <button data-toggle="modal" data-backdrop="false" data-target="#mod-rent-car-add" class="btn btn-rounded btn-space btn-primary"><i class="icon icon-left mdi mdi-car"></i> Tambah Kendaraan</button>
+                            <table id="rent-cars-table" class="table table-striped table-hover table-fw-widget">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Kendaraan</th>
+                                        <th>Plat Nomor</th>
+                                        <th>Tujuan</th>
+                                        <th>Berangkat</th>
+                                        <th>Kembali</th>
+                                        <th>Durasi</th>
+                                        <th>Biaya/Hari</th>
+                                        <th>Tambahan</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div data-step="3" class="step-pane">
+                            <div class="invoice">
+                                <div class="row invoice-header">
+                                    <div class="col-xs-7">
+                                        <div class="invoice-logo"></div>
+                                    </div>
+                                    <div class="col-xs-5 invoice-order">
+                                        <span class="invoice-id" style="font-size: 18px;">Invoice #2308</span>
+                                        <span class="incoice-date">August 23, 2016</span>
+                                    </div>
+                                </div>
+                                <div class="row invoice-data">
+                                    <div class="col-xs-5 invoice-person">
+                                        <span>PT. REJEKI TRANSINDO - RENT CAR</span>
+                                        <span>Jl. Rungkut Barata III No. 23, Surabaya</span>
+                                        <span>(031) 8756561</span>
+                                        <span>0852-3114-2299</span>
+                                        <span>0811-3000-670</span>
+                                    </div>
+                                    <div class="col-xs-2 invoice-payment-direction"><i class="icon mdi mdi-chevron-right"></i></div>
+                                    <div class="col-xs-5 invoice-person">
+                                        <span class="name">Elliot Mark</span>
+                                        <span class="address">CEO at BLX</span>
+                                        <span class="tel">ceoblx@company.co</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="invoice-details">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:60%">Kendaraan</th>
+                                                    <th style="width:15%" class="amount">Biaya</th>
+                                                    <th style="width:10%" class="hours">Hari</th>
+                                                    <th style="width:15%" class="amount">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="description">Web design (Etiam sagittis metus sit amet mauris gravida hendrerit) Web design (Etiam sagittis metus sit amet mauris gravida hendrerit)</td>
+                                                    <td class="amount price">$4,200.00</td>
+                                                    <td class="hours">60</td>
+                                                    <td class="amount total-amount">$4,200.00</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td></td>
+                                                    <td colspan="2" class="summary">Subtotal</td>
+                                                    <td class="amount subtotal-value autoRupiah">$7,400,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td colspan="2" class="summary">Tambahan</td>
+                                                    <td class="amount extra-value autoRupiah">$1,480,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td colspan="2" class="summary total">Total</td>
+                                                    <td class="amount total-value autoRupiah">$5,920</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 invoice-message">
+                                        <span class="title">Keterangan</span>
+                                        <p>Tiket Masuk, Parkir, Karcis, Tol / Tiket Ferry penyebarangan untuk kendaraan dibayar pemakai</p>
+                                        <div class="form-group">
+                                            <textarea name="notes" class="form-control" placeholder="Keterangan"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row invoice-footer">
+                                    <div class="col-md-12">
+                                        <button data-wizard="#wizard1" class="btn btn-lg btn-space wizard-previous">Sebelumnya</button>
+                                        <button class="btn btn-lg btn-space btn-default btn-order-save">Simpan</button>
+                                        <button class="btn btn-lg btn-space btn-primary">Simpan Dan Cetak</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    App.wizard();
+    newOrdersPage();
+</script>
+<div id="mod-rent-car-add" role="dialog" class="modal fade colored-header colored-header-primary">
+    <div class="modal-dialog  full-width">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+                <h3 class="modal-title">Pilih Kendaraan</h3>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="col-md-8" style="border-right:1px solid #ddd">
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Kendaraan</label>
+                            <select class="form-control cars-select" name="cars" style="width: 100%">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Tujuan</label>
+                            <input type="text" name="destination" placeholder="Tujuan" class="form-control" data-required-error="Mohon diisi lengkap" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Area Tujuan</label>
+                            <select class="form-control area-select" name="area" style="width: 100%" data-error="Pilih Area Tujuan" required>
+                                <option></option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Tanggal Berangkat</label>
+                            <input type="text" name="departure" placeholder="Waktu Keberangkatan" class="form-control datetimepick" data-required-error="Mohon diisi lengkap" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Tanggal Kembali</label>
+                            <input type="text" name="arival" placeholder="Waktu Kembali" class="form-control datetimepick" data-required-error="Mohon diisi lengkap" disabled required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Sopir</label>
+                            <select class="form-control driver-select" name="driver" style="width: 100%">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Biaya Sewa</label>
+                            <input type="text" name="initial_charge" placeholder="Biaya Sewa" class="form-control" data-required-error="Mohon diisi lengkap" readonly>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Jumlah Hari Penyewaan</label>
+                            <input type="text" name="days" placeholder="Jumlah Hari Penyewaan" class="form-control" data-required-error="Mohon diisi lengkap" readonly>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Biaya Tambahan</label>
+                            <input type="number" value="0" name="extra_charge" placeholder="Biaya Tambahan : Tol, Karcis" class="form-control" data-required-error="Mohon diisi lengkap">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Total Biaya</label>
+                            <input type="text" name="total" placeholder="Biaya Total" class="form-control" data-required-error="Mohon diisi lengkap" readonly>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer col-md-12">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Batal</button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary btn-confirm-add">Tambahkan</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+
+<div class="page-head">
+    <h2 class="page-head-title">Daftar Kendaraan</h2>
+    <ol class="breadcrumb page-head-nav">
+        <li>
+            <a href="#" class="page-link">Home</a>
+        </li>
+        <li class="active">Kendaraan</li>
+    </ol>
+</div>
+<div class="main-content container-fluid" data-title="Daftar Kendaraan" data-page="list-cars">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default panel-table panel-border-color panel-border-color-primary">
+                <div class="panel-heading">Daftar Kendaraan
+                    <div class="tools">
+                        <a href="cars/add.html" class="btn btn-rounded btn-space btn-primary page-link">
+                            <i class="icon icon-left mdi mdi-plus-circle-o"></i> Tambah
+                        </a>
+                        <button class="btn btn-rounded btn-space btn-default">
+                            <i class="icon icon-left mdi mdi-print"></i> Cetak
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table id="cars-table" class="table table-striped table-hover table-fw-widget">
+                        <thead>
+                            <tr>
+                                <th>Plat Nomor</th>
+                                <th>Nama Kendaraan</th>
+                                <th>Tahun Produksi</th>
+                                <th>Jenis Bahan Bakar</th>
+                                <th>Jenis Kendaraan</th>
+                                <th>Pemilik Asli</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    listCarsPage();
+</script>
+<div id="mod-car-delete" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <div class="text-danger"><span class="modal-main-icon mdi mdi-close-circle-o"></span></div>
+                    <h3>Hapus Kendaraan</h3>
+                    <p>Apakah anda yakin akan menghapus kendaraan <br><b class="mod-car-delete-detail">ini</b></p>
+                    <div class="xs-mt-50">
+                        <button type="button" data-dismiss="modal" class="btn btn-space btn-default">Batal</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-space btn-danger btn-confirm-delete">Hapus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>

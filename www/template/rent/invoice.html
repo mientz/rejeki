@@ -1,0 +1,98 @@
+<div class="page-head">
+    <h2 class="page-head-title">Nota Penyewaan</h2>
+    <ol class="breadcrumb page-head-nav">
+        <li>
+            <a href="#" class="page-link">Home</a>
+        </li>
+        <li>
+            <a href="rent/list.html" class="page-link">Penyewaan</a>
+        </li>
+        <li class="active">Nota</li>
+    </ol>
+</div>
+<div class="main-content container-fluid" data-title="Tambah Kendaraan" data-page="add-cars">
+    <div class="invoice">
+        <div class="row invoice-header">
+            <div class="col-xs-7">
+                <div class="invoice-logo"></div>
+            </div>
+            <div class="col-xs-5 invoice-order">
+                <span class="invoice-id" style="font-size: 18px;">Invoice #2308</span>
+                <span class="incoice-date">August 23, 2016</span>
+            </div>
+        </div>
+        <div class="row invoice-data">
+            <div class="col-xs-5 invoice-person">
+                <span>PT. REJEKI TRANSINDO - RENT CAR</span>
+                <span>Jl. Rungkut Barata III No. 23, Surabaya</span>
+                <span>(031) 8756561</span>
+                <span>0852-3114-2299</span>
+                <span>0811-3000-670</span>
+            </div>
+            <div class="col-xs-2 invoice-payment-direction"><i class="icon mdi mdi-chevron-right"></i></div>
+            <div class="col-xs-5 invoice-person">
+                <span class="name">Elliot Mark</span>
+                <span class="address">CEO at BLX</span>
+                <span class="tel">ceoblx@company.co</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="invoice-details">
+                    <thead>
+                        <tr>
+                            <th style="width:60%">Kendaraan</th>
+                            <th style="width:15%" class="amount">Biaya</th>
+                            <th style="width:5%" class="hours">Hari</th>
+                            <th style="width:20%" class="amount">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<!--
+                        <tr>
+                            <td class="description">Web design (Etiam sagittis metus sit amet mauris gravida hendrerit) Web design (Etiam sagittis metus sit amet mauris gravida hendrerit)</td>
+                            <td class="amount price autoRupiah">$4,200.00</td>
+                            <td class="hours">60</td>
+                            <td class="amount total-amount autoRupiah">$4,200.00</td>
+                        </tr>
+-->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="summary">Subtotal</td>
+                            <td class="amount subtotal-value autoRupiah">740000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="summary">Tambahan</td>
+                            <td class="amount extra-value autoRupiah">1480</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="summary total">Total</td>
+                            <td class="amount total-value autoRupiah">5920</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 invoice-message">
+                <span class="title">Keterangan</span>
+                <p>Tiket Masuk, Parkir, Karcis, Tol / Tiket Ferry penyebarangan untuk kendaraan dibayar pemakai</p>
+                <div class="form-group">
+                    <textarea name="notes" class="form-control" placeholder="Keterangan"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row invoice-footer">
+            <div class="col-md-12">
+                <button class="btn btn-lg btn-space btn-primary">Cetak</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    invoicePage({{id}});
+</script>

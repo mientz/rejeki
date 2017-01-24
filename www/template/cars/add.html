@@ -1,0 +1,88 @@
+
+<div class="page-head">
+    <h2 class="page-head-title">Tambah Kendaraan</h2>
+    <ol class="breadcrumb page-head-nav">
+        <li>
+            <a href="#" class="page-link">Home</a>
+        </li>
+        <li>
+            <a href="cars/list.html" class="page-link">Kendaraan</a>
+        </li>
+        <li class="active">Tambah</li>
+    </ol>
+</div>
+<div class="main-content container-fluid" data-title="Tambah Kendaraan" data-page="add-cars">
+    <div class="panel panel-default panel-border-color panel-border-color-primary">
+        <div class="panel-heading panel-heading-divider">Kendaraan Baru
+            <span class="panel-subtitle">Lengkapi semua inputan untuk menambahkan kendaraan</span>
+        </div>
+        <div class="panel-body">
+            <form role="form" data-toggle="validator" style="border-radius: 0px;" class="form-horizontal xs-pt-10" id="form-new-cars">
+                <div class="form-group has-feedback">
+                    <label class="col-sm-3 control-label">Plat Nomor</label>
+                    <div class="col-md-6 col-sm-9">
+                        <div class="input-group input-group xs-mb-15">
+                            <input type="text" data-mask="license-plate-first" placeholder="L" name="license_plate[]" class="form-control" data-required-error="Mohon di isi lengkap" required>
+                            <span class="input-group-addon">&nbsp;</span>
+                            <input type="text" data-mask="license-plate-second" placeholder="1234" name="license_plate[]" class="form-control" data-required-error="Mohon di isi lengkap" required>
+                            <span class="input-group-addon">&nbsp;</span>
+                            <input type="text" data-mask="license-plate-third" placeholder="WKS" name="license_plate[]" class="form-control" data-required-error="Mohon di isi lengkap" required>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="col-sm-3 control-label xs-pt-20">Tipe Kendaraan</label>
+                    <div class="col-md-6 col-sm-9">
+                        <div class="be-radio-icon inline">
+                            <input type="radio" name="type" id="rad1" value="Mobil" checked>
+                            <label for="rad1"><span class="mdi mdi-car"></span></label>
+                        </div>
+                        <div class="be-radio-icon inline">
+                            <input type="radio" name="type" id="rad2" value="Bus">
+                            <label for="rad2"><span class="mdi mdi-bus"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="col-sm-3 control-label">Nama Kendaraan</label>
+                    <div class="col-md-6 col-sm-9">
+                        <input type="text" name="name" placeholder="Kijang Innova Tipe G" class="form-control" data-required-error="Mohon diisi lengkap" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="col-sm-3 control-label">Tahun Kendaraan</label>
+                    <div class="col-md-6 col-sm-9">
+                        <input type="text" data-mask="year" placeholder="2015" name="year" class="form-control" data-required-error="Mohon diisi lengkap" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Bahan Bakar</label>
+                    <div class="col-md-6 col-sm-9">
+                        <select class="form-control" name="fuel">
+                            <option>Bensin</option>
+                            <option>Solar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Pemilik</label>
+                    <div class="col-md-6 col-sm-9">
+                        <input type="text" placeholder="Bapak Jowokikojo" name="ownership" class="form-control">
+                    </div>
+                </div>
+                <div class="row xs-pt-15" >
+                    <div class="col-xs-12 col-md-9">
+                        <p class="text-right">
+                            <button type="submit" class="btn btn-space btn-primary">Simpan</button>
+                            <a href="cars/list.html" class="btn btn-space btn-default page-link">Batal</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">addCarsPage();</script>
