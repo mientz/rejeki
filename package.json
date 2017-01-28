@@ -17,7 +17,8 @@
   "author": "Wijaya",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.1",
+    "electron-winstaller": "^2.5.1"
   },
   "dependencies": {
     "datauri": "^1.0.5",
